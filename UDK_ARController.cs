@@ -22,7 +22,6 @@ namespace UnityEngine.XR.Interaction.Toolkit.AR {
             }
         }
 
-
         public void ChangeGameObjectStatus() {
 
             var placementAnchor = GameObject.Find("AR Placed Cube(Clone)");
