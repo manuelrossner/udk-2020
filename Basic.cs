@@ -11,7 +11,7 @@ public class Basic : MonoBehaviour
 
     public bool active;
 
-    public float moveSpeed = 0.001f;
+    public float moveSpeed = .0001f;
 
     public float startYPos;
 
@@ -19,6 +19,7 @@ public class Basic : MonoBehaviour
     void Start()
     {
         //Debug.Log("Hello World!");
+        moveSpeed = Random.Range(-1, 1) * 0.001f;
         initPos = new Vector3(transform.position.x,transform.position.y,transform.position.z);
         yPos = transform.position.y;
         startYPos = transform.position.y;
@@ -29,8 +30,7 @@ public class Basic : MonoBehaviour
     void Update()
     {
         if (transform.position.y > startYPos + 0.5f || 
-            transform.position.y < startYPos - 0.5f ||
-            Input.GetKeyDown("space") == true
+            transform.position.y < startYPos - 0.5f
         ) {
             moveSpeed = -1 * moveSpeed;
         }
